@@ -40,7 +40,7 @@ public:
         else
             cout << "Second minimum element = " << secondMin << endl;
     }
-    }
+    
 };
 
 int main() {
