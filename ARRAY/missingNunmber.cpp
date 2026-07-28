@@ -3,21 +3,20 @@ using namespace std;
 void missingNumber(int arr[],int n,int k){
     bool anyMissing = false;
     for(int i=1;i<=k;i++){
-        bool found = false;
+        bool found=false;
         for(int j=0;j<n;j++){
-            if(i==arr[j]){
-                found = true ;
+            if(arr[j]==i){
+                found=true;
                 break;
             }
         }
         if(!found){
-            cout<<"Missing number is : "<<i<<endl;
-            anyMissing=true;
+            cout<<"Missing number is " << i << endl;
+            anyMissing = true;
         }
-        
     }
     if(!anyMissing)
-        cout<<"There is not any missing number ";
+        cout << "No missing number";
 }
 int main(){
     int n,k;
