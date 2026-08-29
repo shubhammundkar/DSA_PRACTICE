@@ -9,10 +9,10 @@ struct Node{
         next=nullptr;
     }
 };
-void insertAtBegining(Node*& head,int x){
-    Node* newNode= new Node(x);
-    newNode->next=head;
-    head=newNode;
+void deleteAtBegning(Node*& head){
+    Node* temp = head;
+    head=head->next;
+    delete temp;
 }
 
 void display(Node* head){
@@ -26,15 +26,13 @@ int main(){
     Node* head = new Node(10);
     Node* second = new Node(20);
     Node* third = new Node(30);
-    Node* fourth = new Node(40);
+    Node* tail = new Node(40);
 
     head->next=second;
     second->next=third;
-    third->next=fourth;
+    third->next=tail;
 
-    insertAtBegining(head,5);
+    deleteAtBegning(head);
     display(head);
     return 0;
 }
-
-
