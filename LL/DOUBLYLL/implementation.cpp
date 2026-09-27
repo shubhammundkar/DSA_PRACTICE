@@ -17,6 +17,7 @@ int main(){
     Node* third=new Node(30);
     Node* fourth=new Node(40);
 
+    second->prev=head;
     head->next=second;
     third->prev=second;
     second->next=third;
