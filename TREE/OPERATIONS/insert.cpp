@@ -13,21 +13,21 @@ struct bstNode{
     }
 };
 
-bstNode* getNewNode(int val){
-    bstNode* newNode=new bstNode(val);
-    newNode->data=val;
+bstNode* getNewNode(int data){
+    bstNode* newNode=new bstNode(data);
+    newNode->data=data;
     return newNode;
 }
 
-bstNode* insert(bstNode* root,int val){
+bstNode* insert(bstNode* root,int data){
     if(root==nullptr){
-        root=getNewNode(val);
+        root=getNewNode(data);
     }
-    else if(root->data<=val){
-        root->left=insert(root->left,val);
+    else if(root->data<=data){
+        root->left=insert(root->left,data);
     }
     else{
-        root->right=insert(root->right,val);
+        root->right=insert(root->right,data);
     }
 }
 
